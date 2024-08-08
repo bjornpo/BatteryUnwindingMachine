@@ -1,0 +1,40 @@
+Servo1: Left Clamp-roller
+    - 30 (Actuated)
+    - 180 (released)
+
+
+Servo2: Right Clamp-roller
+    - 30 (released)
+    - 180 (Actuated)
+
+Servo3: Battery-shelf
+    - 30 (released)
+    - 180 (Actuated)
+
+Sevo4: battery-clamp
+    - 80 (open)
+    -140 (closed)
+
+
+Steppers (0-1650)
+Stepper 1:
+
+
+Start pos:
+T1 I1 P30#T1 I2 P180#T1 I3 P180#T1 I4 P80#T2 I1 P0#T2 I2 P0#T2 I3 P0
+
+Close clamping rollers:
+T1 I1 P180#T1 I2 P30
+
+close battery clamp:
+T1 I4 P140
+T1 I4 D
+
+Release batteryTray
+T1 I3 P30
+
+
+fasten seperator film
+T2 I4 P-2500
+
+

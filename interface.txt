@@ -1,0 +1,19 @@
+Baudrate = 115200
+
+Type{T}: {Servo=1, Stepper=2, DC-motor=3}
+
+ID{I}: {1-n}
+
+Pos{P}: 
+
+Speed{S}: stepper {if ID exists, update single actuator, else update all}
+
+Disable{D}: IF ID exists, disable single actuator, else disable all of the same Type
+
+Accel{A}: acceleration(stepper) if ID exists, update single actuator, else update all
+
+Servio: T1 In P90 DC
+Stepper: if speed and no pos is sendt to the stepper, stepper goes into constant speed mode. 
+DC-motor: if parameter D exists, motor will run in fast decay mode
+
+Multiple cammands can be seperated with '#'
